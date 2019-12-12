@@ -14,6 +14,9 @@ h2:after{
     position: absolute;
     text-shadow: 1px 1px 2px #000;
 }
+p{
+    font-family: "Source Code Pro", sans-serif;
+}
 .spacer{
     display: block;
     min-height: 10vh;
@@ -103,6 +106,7 @@ I want to throttle whoever programmed this !@#$. Can't get
 .nav-item{
     border: 0; !important;
 }
+
 
 .cstm-border{
     border: 8px solid transparent;
