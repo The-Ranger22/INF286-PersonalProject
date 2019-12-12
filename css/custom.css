@@ -29,13 +29,19 @@ h2:after{
     -webkit-text-fill-color: transparent;
     border-radius: 30px;
     filter: drop-shadow(2px 2px black);
-    font-size: 60px;
+    font-size: 3vw;
+
+
+}
+@media only screen and (max-width: 600px) {
+   .scs-bg-hdr{
+       text-align: center;
+       font-size: 16px;
+   }
 }
 .nav-container{
     background: -webkit-linear-gradient(#000035,#0079d7, #000035);
     color: yellow;
-
-
 }
 .nav-item-style{
     list-style-type: none; !important;
@@ -45,7 +51,10 @@ h2:after{
     font-family: 'Press Start 2P', sans-serif; !important;
     color: yellow; !important;
     font-size: 3vh; !important;
+    min-font-size: 24px;
     filter: drop-shadow(2px 2px black); !important;
+    display: block;
+    min-width: 100px;
     /*text-shadow: 2px 2px black;*/
 }
 .nav-item-style:hover{
@@ -67,7 +76,8 @@ h2:after{
     border-image-slice: 30%;
 }
 /*
-I want to throttle whoever programmed this !@#$. Can't get rid of that stupid white out line on the nav items.
+I want to throttle whoever programmed this !@#$. Can't get
+ rid of that stupid white out line on the nav items.
 */
 .nav-link{
     border: 0; !important;
