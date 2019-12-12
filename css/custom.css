@@ -3,7 +3,16 @@ scs - site color scheme
 */
 
 h2{
-    font-size: 3vh;
+
+}
+h2:after{
+    background: none;
+    content: attr(data-text);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 1px 1px 2px #000;
 }
 .spacer{
     display: block;
@@ -14,49 +23,114 @@ h2{
     min-height: 1rem;
 }
 .scs-bg-hdr{
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     background: -webkit-linear-gradient(orangered, gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: fixed;
-    border: 5px solid white;
     border-radius: 30px;
+    filter: drop-shadow(2px 2px black);
+    font-size: 60px;
 }
 .nav-container{
-    background: -webkit-linear-gradient(#0079d7, #000035);
+    background: -webkit-linear-gradient(#000035,#0079d7, #000035);
     color: yellow;
-    border: 2px solid #acacac;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+
+
+}
+.nav-item-style{
+    list-style-type: none; !important;
+    background: -webkit-linear-gradient(orangered, gold); !important;
+    -webkit-background-clip: text; !important;
+    -webkit-text-fill-color: transparent; !important;
+    font-family: 'Press Start 2P', sans-serif; !important;
+    color: yellow; !important;
+    font-size: 3vh; !important;
+    filter: drop-shadow(2px 2px black); !important;
+    /*text-shadow: 2px 2px black;*/
+}
+.nav-item-style:hover{
+    cursor: pointer;
+}
+
+.nav-link.hover{
+    border: 8px solid transparent;
+    border-radius: 5px;
+    border-image-source: url('https://i.ibb.co/M6Dyff9/customborder.png');
+    border-image-repeat: repeat;
+    border-image-slice: 30%;
+}
+.nav-link.active{
+    border: 8px solid transparent;
+    border-radius: 5px;
+    border-image-source: url('https://i.ibb.co/M6Dyff9/customborder.png');
+    border-image-repeat: repeat;
+    border-image-slice: 30%;
+}
+/*
+I want to throttle whoever programmed this !@#$. Can't get rid of that stupid white out line on the nav items.
+*/
+.nav-link{
+    border: 0; !important;
+}
+.nav-link.focus{
+    border: 0; !important;
+    border-color: transparent; !important;
+}
+.nav-tabs{
+    border: 0; !important;
+    border-radius: 0; !important;
+}
+.nav-tabs.hover{
+    border: 0; !important;
+}
+.nav-tabs.active{
+    border: 0; !important;
+    border-radius: 0; !important;
+}
+.nav-item.show{
+    border: 0; !important;
 }
 .nav-item{
-    font-family: 'Press Start 2P', cursive;
-    color: yellow;
-    font-size: 3vh;
-    text-shadow: 2px 2px black;
+    border: 0; !important;
+}
+
+.cstm-border{
+    border: 8px solid transparent;
+    border-radius: 5px;
+    border-image-source: url('https://i.ibb.co/M6Dyff9/customborder.png');
+    border-image-repeat: repeat;
+    border-image-slice: 30%;
+
+    /*border-top-right-radius: 10px;
+    border-top-left-radius: 10px;*/
 }
 .border-cap-left{
-    border-left: 1px solid gray;
+    border-left: 1px solid gray; !important;
 }
 .border-cap-right{
-    border-right: 1px solid gray;
+    border-right: 1px solid gray; !important;
 }
 .border-cap-lr{
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-left: 1px solid gray; !important;
+    border-right: 1px solid gray; !important;
 }
 .standard-container{
+    font-family: 'Source Code Pro', sans-serif;
     background-color: #000035;
     color: white;
-    border: 2px solid gray;
 
 }
 .footer-container{
-    background: -webkit-linear-gradient(#000035, #0079d7);
+    font-family: 'Source Code Pro', sans-serif;
+    background: -webkit-linear-gradient(#000035,#0079d7, #000035);
     color: yellow;
-    border: 2px solid #acacac;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+}
+.header-text{
+    font-family: 'Press Start 2P', sans-serif;!important;
+    background: -webkit-linear-gradient(orangered, gold);!important;
+    -webkit-background-clip: text;!important;
+    -webkit-text-fill-color: transparent;!important;
+    filter: drop-shadow(2px 2px black);!important;
 }
 .p-top-10{
     padding-top: 10px;
@@ -82,6 +156,14 @@ h2{
 .m-rgt-10{
     margin-right: 10px;
 }
+.ico-style{
+    font-family: 'Press Start 2P', sans-serif; !important;
+    background: -webkit-linear-gradient(orangered, gold); !important;
+    -webkit-background-clip: text; !important;
+    -webkit-text-fill-color: transparent; !important;
+    filter: drop-shadow(2px 2px black); !important;
+    font-size: 32px; !important;
+}
 
 @font-face {
     font-family: Pixel;
@@ -89,14 +171,15 @@ h2{
 }
 @keyframes animatedBackground {
     from { background-position: 0 0; }
-    to { background-position: -100% 100%; }
+    to { background-position: -192px 192px; }
 }
 
 #animate-area	{
     background-image: url('https://i.ibb.co/YLMfCFw/pixil-frame-0-2.png');
+    background-color: #0f0135;
     background-position: 0px 0px;
     background-repeat: repeat;
     min-height: 100vh;
 
-    animation: animatedBackground 35s linear infinite;
+    animation: animatedBackground 4s linear infinite;
 }
